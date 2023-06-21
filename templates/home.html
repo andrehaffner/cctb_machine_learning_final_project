@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/styles/home.css">
+{% endblock %}
+
+{% block content %}
+    <h1>Logistic Regression Model Generator</h1>
+    <h2>Developed by Andre Haffner and Caio Rossi</h2>
+    <form method="POST" enctype="multipart/form-data" class="data_form">
+        <label for="dataset_url" class="data_form_label">CSV Dataset URL</label>
+        <br>
+        <input type="text" id="dataset_url" name="dataset_url" class="data_form_input">
+        <br>
+        <label for="target_column" class="data_form_label">Target Column</label>
+        <br>
+        <input type="text" id="target_column" name="target_column" class="data_form_input">
+        <br>
+        <button type="submit" class="data_form_submit">Generate Logistic Regression Model</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/styles/base.css">
+    <link rel="icon" href="../static/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    {% block style %}{% endblock %}
+    <script src="https://kit.fontawesome.com/77d6772feb.js" crossorigin="anonymous"></script>
+</head>
+<body class="body">
+    <section class="h">
+        <nav class="nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="nav-logo">
+                <i>DEAC109: Machine Learning Final Project </i>
+            </label>
+            <ul class="nav-items-list">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://github.com/andrehaffner/cctb_machine_learning_final_project"
+                       target="_blank" class="nav-link">
+                        Code
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <section>
+        <br/><br/><br/>
+        {% block content %}
+        {% endblock %}
+    </section>
+</body>
+</html>

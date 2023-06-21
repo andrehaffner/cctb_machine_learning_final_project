@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}Wrong Dataset URL{% endblock %}
+{% block style %}<link rel="stylesheet" href="../static/styles/home.css">{% endblock %}
+
+{% block content %}
+    <h1>Target column not in dataset!</h1>
+    <h2>Columns: {{ columns }}</h2>
+    <h2><a href="/">{{ "Click here to go back" }}</a></h2>
+{% endblock %}

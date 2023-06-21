@@ -1,0 +1,65 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ home.css ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+a {
+    color: #f6f1f1;
+}
+
+h1 {
+    font-family: 'Noto Sans', sans-serif;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 200%;
+    color: #f6f1f1;
+}
+
+h2 {
+    margin-top: 1%;
+    font-family: 'Noto Sans', sans-serif;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 120%;
+    color: #f6f1f1;
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
+.data_form {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.data_form_label {
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 8%;
+    display: inline-block;
+    font-size: 200%;
+    color: #f6f1f1;
+}
+
+.data_form_input {
+    margin-top: 2%;
+    width: 70%;
+    height: 50px;
+    background-color: #f6f1f1;
+    border-radius: 5%;
+    border-color: #333333;
+    padding: 2%;
+}
+
+.data_form_submit {
+    margin-top: 5%;
+    font-size: 150%;
+    padding: 2%;
+    font-family: 'Noto Sans', sans-serif;
+    width: 40%;
+    height: 50%;
+    background-color: #f6f1f1;
+    border-radius: 5%;
+    border-color: #333333;
+    color: #333333;
+}

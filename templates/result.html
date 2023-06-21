@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}Result{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="../static/styles/result.css">
+{% endblock %}
+
+{% block content %}
+    <h1>Logistic Regression Model Coefficients</h1>
+    <h2>Accuracy: {{ accuracy }}</h2>
+    <h3>Sample used:</h3>
+    <div class="table_container">
+        <table>
+            <thead>
+                <tr>
+                    {% for col in sample.columns %}
+                        <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in sample.iterrows() %}
+                    <tr>
+                        {% for value in row[1] %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <h3>Generated plot:</h3>
+    <img src="data:image/png;base64,{{ plot }}" alt="Plot Image">
+    <h3>Thank you for using our WebApp!</h3>
+{% endblock %}
