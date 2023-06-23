@@ -30,6 +30,7 @@ def home():
 
         model, accuracy = logistic_regression_model_generator(df, target_variable)
         coefficients = model.coef_[0]
+        print(coefficients)
         feature_names = list(df.columns)
         if len(coefficients) > len(feature_names):
             fig = go.Figure(data=go.Bar(x=coefficients, y=feature_names))
