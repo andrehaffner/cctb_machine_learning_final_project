@@ -17,7 +17,9 @@ def logistic_regression_model_generator(df, target_variable):
     cols = x_train.columns
     num_cols = x_train.select_dtypes(include='number').columns
     cat_cols = list(set(cols) - set(num_cols))
-    preprocessor = ColumnTransformer(transformers=[('categorical', OneHotEncoder(handle_unknown='ignore'), cat_cols)],
+    preprocessor = ColumnTransformer(transformers=[('categorical',
+                                                    OneHotEncoder(handle_unknown='ignore'),
+                                                    cat_cols)],
                                      remainder='passthrough')
     x_train_encoded = preprocessor.fit_transform(x_train)
     x_test_encoded = preprocessor.transform(x_test)

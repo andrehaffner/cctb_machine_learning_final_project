@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, redirect, request
-from app_func import logistic_regression_model_generator
+from .functions import logistic_regression_model_generator
 from pandas.errors import ParserError
 import plotly.graph_objects as go
 import pandas as pd
@@ -33,12 +33,14 @@ def home():
         print(coefficients)
         feature_names = list(df.columns)
         if len(coefficients) > len(feature_names):
-            fig = go.Figure(data=go.Bar(x=coefficients, y=feature_names))
+            fig = go.Figure(data=go.Scatter(x=coefficients, y=feature_names),
+                            layout_xaxis_range=[min(coefficients), max(coefficients)])
             fig.update_layout(title='Logistic Regression Model Coefficients',
                               xaxis_title='Coefficients',
                               yaxis_title='Features')
         else:
-            fig = go.Figure(data=go.Bar(x=feature_names, y=coefficients))
+            fig = go.Figure(data=go.Scatter(x=feature_names, y=coefficients),
+                            layout_yaxis_range=[min(coefficients), max(coefficients)])
             fig.update_layout(title='Logistic Regression Model Coefficients',
                               xaxis_title='Features',
                               yaxis_title='Coefficients')
